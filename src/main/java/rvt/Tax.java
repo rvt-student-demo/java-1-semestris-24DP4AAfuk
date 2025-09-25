@@ -13,7 +13,7 @@ public class Tax {
     }
 
     public static double calculateTax(int gift) {
-        double tax;
+        double tax = 0;
 
         if (gift < 5000) {
             tax = 0.0;
@@ -27,8 +27,6 @@ public class Tax {
             tax = 22100 + (gift - 200000) * 0.15;
         } else if (gift >= 1000000) {
             tax = 142100 + (gift - 1000000) * 0.17;
-        } else {
-            tax = 0.0;
         }
 
         System.out.println("Tax: " + tax);
