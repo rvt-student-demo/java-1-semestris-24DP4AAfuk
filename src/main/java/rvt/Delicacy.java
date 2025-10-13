@@ -17,7 +17,7 @@ public class Delicacy {
         System.out.print("Include express delivery (y/n): ");
         char answer = scanner.next().charAt(0);
 
-        double deliveryFee = 0;
+        double deliveryFee;
         if (productPrice < 10) {
             deliveryFee = 2.0;
         } else {
