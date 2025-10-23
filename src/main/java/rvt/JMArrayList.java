@@ -9,7 +9,13 @@ public class JMArrayList {
         // onlyTheseNumbers();
         // listSize();
         // onTheList();
-        // removeLast(ArrayList<String> strings);
+        // ArrayList<String> strings = new ArrayList<>();
+        
+        // strings.add("first");
+        // strings.add("second");
+        // strings.add("third");
+
+        // removeLast(strings);
     }
 
     public static void onlyTheseNumbers() {
@@ -52,6 +58,34 @@ public class JMArrayList {
         System.out.println("Number of strings entered: " + strings.size());
     }
     public static void onTheList() {
-        // TODO complete method
+        ArrayList<String> strings = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter strings (empty string to stop): ");
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.isEmpty()) {
+                break;
+            }
+            strings.add(input);
+        }
+
+        System.out.print("Enter a string to search for: ");
+        String searchString = scanner.nextLine();
+
+        if (strings.contains(searchString)) {
+            System.out.println("The string is on the list.");
+        } else {
+            System.out.println("The string is not on the list.");
+        }
+    }
+    public static void removeLast(ArrayList<String> strings) {
+        if (strings.isEmpty()) {
+            System.out.println("The list is empty. Nothing to remove.");
+        } else {
+            String removedString = strings.remove(strings.size() - 1);
+            System.out.println(strings);
+            System.out.println("Removed string: " + removedString);
+        }
     }
 }
