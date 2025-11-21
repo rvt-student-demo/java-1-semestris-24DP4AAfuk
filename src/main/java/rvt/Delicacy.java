@@ -3,6 +3,7 @@ package rvt;
 import java.util.Scanner;
 
 public class Delicacy {
+
     public static void main(String[] args) {
         // input area
         Scanner scanner = new Scanner(System.in);
@@ -39,5 +40,5 @@ public class Delicacy {
         System.out.println("Total price: $" + totalPrice);
         System.out.println("--------------------------------------------");
         System.out.println("Thank you for shopping with us!");
-    }   
+    }
 }
