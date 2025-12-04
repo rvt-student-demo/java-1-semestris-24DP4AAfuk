@@ -1,0 +1,57 @@
+package rvt;
+
+public class Counter {
+    int startValue;
+    int value;
+
+    public Counter() {
+        this.value = 0;
+    }
+
+    public Counter(int startValue) {
+        this.value = startValue;
+    }
+
+    public int value() {
+        return this.value;
+    }
+
+    public void increase() {
+        this.value++;
+    }
+
+    public void decrease() {
+        if (this.value > this.startValue) {
+            this.value--;
+        }
+    }
+
+    public void increase(int increaseBy) {
+        if (increaseBy < 0) {
+            return;
+        }
+        this.value += increaseBy;
+    }
+
+    public void decrease(int decreaseBy) {
+        if (decreaseBy < 0) {
+            return;
+        }
+        if (this.value - decreaseBy < this.startValue) {
+            this.value = this.startValue;
+        } else {
+            this.value -= decreaseBy;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Counter counter = new Counter(); 
+        // System.out.println(counter.value()); 
+        // counter.increase(); 
+        // counter.increase(5); 
+        // System.out.println(counter.value());
+        // counter.decrease(); 
+        // counter.decrease(3); 
+        // System.out.println(counter.value());
+    }
+}
