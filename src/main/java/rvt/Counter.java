@@ -45,13 +45,6 @@ public class Counter {
     }
 
     public static void main(String[] args) {
-        // Counter counter = new Counter(); 
-        // System.out.println(counter.value()); 
-        // counter.increase(); 
-        // counter.increase(5); 
-        // System.out.println(counter.value());
-        // counter.decrease(); 
-        // counter.decrease(3); 
-        // System.out.println(counter.value());
+        
     }
 }
