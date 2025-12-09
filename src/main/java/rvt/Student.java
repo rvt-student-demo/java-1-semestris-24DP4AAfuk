@@ -18,9 +18,9 @@ public class Student extends Person {
     }
 
     public static void main(String[] args) {
-        Student student = new Student("John Doe", "123 Main St");
-        System.out.println(student);
-        student.study();
-        System.out.println(student);
+        // Student student = new Student("John Doe", "123 Main St");
+        // System.out.println(student);
+        // student.study();
+        // System.out.println(student);
     }
 }
