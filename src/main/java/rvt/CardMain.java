@@ -2,23 +2,15 @@ package rvt;
 
 public class CardMain {
    public static void main(String[] args) {
-    PaymentCard paulsCard = new PaymentCard(20);
-    PaymentCard mattsCard = new PaymentCard(30);
+    PaymentCard petesCard = new PaymentCard(10);
 
-    paulsCard.eatHeartily();
-    mattsCard.eatAffordably();
-    System.out.println("Paul: " + paulsCard);
-    System.out.println("Matt: " + mattsCard);
+        System.out.println("money " + petesCard.balance());
+        boolean wasSuccessful = petesCard.takeMoney(8);
+        System.out.println("successfully withdrew: " + wasSuccessful);
+        System.out.println("money " + petesCard.balance());
 
-    paulsCard.addMoney(20);
-    mattsCard.eatHeartily();
-    System.out.println("Paul: " + paulsCard);
-    System.out.println("Matt: " + mattsCard);
-
-    paulsCard.eatAffordably();
-    paulsCard.eatAffordably();
-    mattsCard.addMoney(50);
-    System.out.println("Paul: " + paulsCard);
-    System.out.println("Matt: " + mattsCard);
+        wasSuccessful = petesCard.takeMoney(4);
+        System.out.println("successfully withdrew: " + wasSuccessful);
+        System.out.println("money " + petesCard.balance());
    } 
 }
