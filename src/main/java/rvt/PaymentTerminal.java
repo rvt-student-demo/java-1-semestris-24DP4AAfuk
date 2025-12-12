@@ -29,6 +29,22 @@ public class PaymentTerminal {
         return payment;
     }
 
+    public boolean eatAffordably(PaymentCard card) {
+        if (card.takeMoney(2.50)) {
+            this.affordableMeals++;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean eatHeartily(PaymentCard card) {
+        if (card.takeMoney(4.30)) {
+            this.heartyMeals++;
+            return true;
+        }
+        return false;
+    }
+
     public String toString() {
         return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
     }
